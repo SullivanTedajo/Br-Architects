@@ -1,0 +1,263 @@
+/* --- ******  PARAMETRAGE DES ELEMENTS GLOBAUX DU SITE  ****** --- */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0.4rem;
+}
+
+html {
+  margin: 0;
+  font-size: 10px;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+button, input, textarea {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  line-height: 1.5em;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --light-gray: #F1F1F1;
+  --hover-gray: #CCCCCC;
+  --black-opacity: #000000a9;
+  --green-color: #4CAF50;
+}
+
+.contact, .about, .projects {
+  padding-inline: 1.2em;
+  margin-top: 4em;
+}
+
+.contact__secondary-title, .about__secondary-title, .projects__secondary-title {
+  margin-bottom: 0.8em;
+  font-weight: 400;
+}
+
+.contact__separator, .about__separator, .projects__separator {
+  opacity: 0.5;
+  margin-bottom: 2em;
+}
+
+.about__members, .projects__project-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.contact__form-control, .contact__form-message {
+  padding: 1.2em 0.8em;
+  margin-bottom: 1.2em;
+  border: 0.1em solid rgba(0, 0, 0, 0.3137254902);
+  width: 100%;
+  display: block;
+}
+.contact__form-control::-moz-placeholder, .contact__form-message::-moz-placeholder {
+  font-size: 1.5em;
+}
+.contact__form-control::placeholder, .contact__form-message::placeholder {
+  font-size: 1.5em;
+}
+
+.header__primary-title, .header__item {
+  padding: 0.5em 0.8em;
+}
+.header__primary-title:hover, .header__item:hover {
+  background-color: var(--hover-gray);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--white-color);
+  margin: 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  letter-spacing: 0.35em;
+  padding: 0.5em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.header__primary-title {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 0.9em;
+  color: var(--black-color);
+}
+.header__items {
+  display: flex;
+  gap: 2.5em;
+  margin: 0;
+}
+.header__item {
+  list-style-type: none;
+}
+.header__link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9em;
+}
+
+@media only screen and (max-width: 610px) {
+  .header__items {
+    display: none;
+  }
+}
+.main {
+  margin-inline: 0.8em;
+}
+
+.hero {
+  background: center/cover url("../img/hero-section.jpg") no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__primary-title {
+  color: var(--white-color);
+  letter-spacing: 0.3em;
+  font-size: 2em;
+  font-weight: 200;
+}
+.hero__logo {
+  padding: 0.35em;
+  background-color: var(--black-opacity);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 50em) {
+  .hero__text {
+    display: none;
+  }
+}
+.projects__project {
+  position: relative;
+}
+.projects__featured-img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.projects__category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5em 1em;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.about__description {
+  margin-bottom: 2em;
+}
+.about__featured-img {
+  filter: grayscale(80%);
+  width: 100%;
+  height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.about__member-card {
+  margin-bottom: 1em;
+}
+.about__member-name {
+  font-size: 1.7em;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-block: 1em 0.5em;
+  padding: 0;
+}
+.about__member-title {
+  opacity: 0.5;
+  font-size: 1em;
+  display: inline-block;
+  margin-block: 0.7em;
+}
+.about__member-description {
+  padding: 0;
+}
+.about__member-button {
+  text-align: center;
+  text-transform: capitalize;
+  display: block;
+  padding: 0.5em 1em;
+  background-color: var(--light-gray);
+}
+.about__member-button:hover {
+  background-color: var(--hover-gray);
+  cursor: pointer;
+}
+
+.contact__form-message {
+  resize: none;
+}
+.contact__submit {
+  display: block;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  padding: 0.6em 0.8em;
+  margin-block: 1.5em;
+  cursor: pointer;
+}
+
+.map {
+  margin-block: 2em 0.5em;
+}
+.map__img {
+  width: 100%;
+  height: 100vh;
+}
+
+.footer {
+  color: var(--white-color);
+  background-color: var(--black-color);
+  padding: 1.2em 1em;
+  text-align: center;
+}
+.footer__title {
+  font-size: 1em;
+  margin: 0;
+}
+.footer__link {
+  color: inherit;
+  text-decoration: underline;
+}
+.footer__link:hover {
+  color: var(--green-color);
+}/*# sourceMappingURL=style.css.map */

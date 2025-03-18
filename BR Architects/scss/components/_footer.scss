@@ -1,0 +1,21 @@
+@forward '../global';
+
+.footer{
+    color: var(--white-color);
+    background-color: var(--black-color);
+    padding: 1.2em 1em;
+    text-align: center;
+
+    &__title{
+        font-size: 1em;
+        margin: 0;
+    }
+
+    &__link{
+        color: inherit;
+        text-decoration: underline;
+        &:hover{
+            color: var(--green-color);
+        }
+    }
+}

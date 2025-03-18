@@ -1,0 +1,47 @@
+@forward '../global';
+
+.main{
+    margin-inline: .8em;
+}
+
+.hero{
+    background:  center / cover  url("../img/hero-section.jpg") no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &__primary-title{
+
+        color: var(--white-color);
+        letter-spacing: .3em;
+        font: {
+            size: 2em;
+            weight: 200;
+        }
+
+    }
+
+    &__logo{
+        padding: .35em;
+        background-color: var(--black-opacity);
+        text: {
+            transform: uppercase;
+        }
+        font: {
+            weight: 800;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 50em) {
+    .hero{
+        &__text{
+            display: none;
+        }
+    }
+}

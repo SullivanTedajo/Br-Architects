@@ -1,0 +1,10 @@
+@forward '../global';
+
+.map{
+    margin-block: 2em .5em;
+
+&__img{
+    width: 100%;
+    height: 100vh;
+}
+}

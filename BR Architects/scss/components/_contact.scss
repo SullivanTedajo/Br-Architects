@@ -1,0 +1,44 @@
+@forward '../global';
+@forward '../util';
+
+.contact{
+
+    @extend %section-set-up;
+    
+    &__secondary-title{
+        @extend %section-title;
+    }
+
+    &__separator{
+        @extend %section-separator;
+    }
+
+   
+
+    &__form-control{
+        @extend %input-set-up;
+       
+    }
+
+    &__form-message{
+        @extend %input-set-up;
+        resize: none;
+    }
+
+
+    &__submit{
+       display: block;
+       font: {
+        size: 1em;
+       }
+       text: {
+        transform: uppercase;
+       }
+       color: var(--white-color);
+       background-color: var(--black-color);
+       padding: .6em .8em;
+       margin-block: 1.5em;
+       cursor: pointer;
+    }
+
+}
